@@ -5,7 +5,7 @@
   "description": "A student guide to Lovely Professional University academics, campus life, hostels, mess, services and directions.",
   "lang": "en",
   "dir": "ltr",
-  "start_url": "/?appVersion=campusgrid-v2",
+  "start_url": "/?appVersion=campusgrid-v3",
   "scope": "/",
   "display": "standalone",
   "orientation": "portrait-primary",
