@@ -1,26 +1,29 @@
 # LPU Campus Hub
 
-A mobile-friendly, installable student guide for Lovely Professional University. It brings academic links, the official school directory, events, sports, hostel and mess information, student services and campus directions into one place.
+An independent, installable student guide for Lovely Professional University. The app opens focused screens for academics, events, sports, hostel and food, student services, campus directions and official links.
 
-**Independent student project:** this is not an official LPU application and does not connect to private student accounts. Official university links are included for current notices, account-only information and details that may change.
+**[Open the live app](https://gleeful-vacherin-699b68.netlify.app/)** · **[Download the Android package](https://gleeful-vacherin-699b68.netlify.app/LPU_Campus_Hub.apk)**
 
-![LPU Campus Hub preview](preview.png)
+## App navigation
 
-## What is included
+- The Home screen has quick cards for each campus area. Tapping a card opens that section as its own app screen.
+- The fixed bottom bar switches between Home, Study, Events, Hostel and Map.
+- Screens use URL fragments, so the browser Back button returns to the previous screen.
+- Search helps find schools and campus topics. Official university links open the source pages.
 
-- Searchable directory covering 27 LPU schools and academic areas
-- Admissions, programme, scholarship, calendar, library, placement and UMS links
-- Campus event, student organisation, arts and culture information
-- Sports and fitness overview with official team and facility links
-- 2026–27 hostel room and mess fee summaries, meal times and sample menu notes
-- Health centre, security, transport, dining, banking and communications links
-- Google Maps route planner, address and a virtual campus tour
-- Progressive Web App setup for installation and basic offline access after the first visit
+## Campus guide
 
-## Publish or preview
+- Directory of LPU schools and academic areas, programmes, admissions, scholarships, calendars, library, placements and UMS
+- Campus events, student organisations, arts and cultural activities
+- Sports, teams and facilities
+- Hostel and mess details, meal timings and food information
+- Health, transport, safety, dining and other student services
+- Google Maps directions, campus address and virtual tour
 
-This is a static site: it has no build step and can be deployed by uploading the contents of this folder to Netlify or GitHub Pages. Open `index.html` directly for a quick preview. The install prompt and offline cache require HTTPS hosting (for example, Netlify or GitHub Pages).
+## Run or publish
 
-## Source and update policy
+This is a static Progressive Web App with no build step. Open `index.html` for a local preview, or upload the folder contents to a static host such as Netlify or GitHub Pages. HTTPS is required for service-worker caching and home-screen installation.
 
-Core facts were checked against public LPU pages on 2 November 2026. The site links directly to official sources because event schedules, programme criteria, fees, room availability and service details can change. Confirm them with LPU before making decisions.
+## Information and attribution
+
+LPU Campus Hub is an independent student project, not an official LPU application. It does not access private UMS accounts or provide live university notices. Core facts were checked against public LPU pages on 2 November 2026. Fees, events, schedules, availability and policies can change; confirm current details with the university.

@@ -1,4 +1,4 @@
-const CACHE_NAME = "lpu-campus-hub-v1";
+const CACHE_NAME = "lpu-campus-hub-v3";
 const APP_FILES = ["./", "./index.html", "./manifest.webmanifest", "./icon.svg"];
 
 self.addEventListener("install", event => {

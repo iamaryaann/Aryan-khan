@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#0c3b30">
+  <meta name="theme-color" content="#29346d">
   <meta name="description" content="LPU Campus Hub: a student guide to academics, all university schools, events, sports, hostels, mess, maps, and campus services.">
   <meta property="og:title" content="LPU Campus Hub — Student Guide">
   <meta property="og:description" content="Academics, campus life, hostels, mess, sports, student services and directions in one guide.">
@@ -30,16 +30,175 @@
     @media(max-width:420px){.hero-panel{padding:24px 19px}.hero-side{right:16px;bottom:17px;width:163px}.hero-side strong{font-size:14px}.hero-side span{font-size:9px}h1{font-size:40px}.feature-grid{grid-template-columns:1fr 1fr}.feature p{font-size:10px}.section-head h2{font-size:27px}.event-grid{grid-template-columns:1fr 1fr}.service-grid{grid-template-columns:1fr 1fr}.school strong{font-size:10px}.list-bullets{grid-template-columns:1fr}}
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition-duration:.01ms!important}}
   </style>
+  <style id="campus-app-redesign">
+    :root{--ink:#172033;--muted:#707b8e;--paper:#f4f5fa;--card:#fff;--green:#575fe0;--green-dark:#29346d;--mint:#eef0ff;--lime:#ffd36e;--amber:#ff765f;--line:#e5e7ef;--shadow:0 12px 30px rgba(31,43,88,.08);--radius:20px}
+    html{scroll-padding-top:78px}
+    body{background:#e9edf4;color:var(--ink);font-size:14px;-webkit-tap-highlight-color:transparent}
+    .topbar,main,footer{width:min(480px,100%);margin-inline:auto}
+    .topbar{position:sticky;top:0;background:rgba(255,255,255,.94);border:0;border-bottom:1px solid var(--line);backdrop-filter:blur(18px)}
+    .topbar .wrap,.wrap{width:min(100% - 28px,438px)}
+    .nav{height:66px;gap:10px}
+    .brand{gap:10px;font-size:14px;letter-spacing:-.04em}
+    .brand-mark{width:40px;height:40px;border-radius:14px;background:var(--green-dark);font-size:11px;letter-spacing:-.04em}
+    .brand small{margin-top:2px;color:var(--muted);font-size:8px;letter-spacing:.13em}
+    .nav-links,.menu-toggle{display:none!important}
+    .header-actions{margin-left:auto}
+    .header-actions .pill-button{display:inline-flex;min-height:35px;padding:0 11px;border:0;border-radius:12px;background:var(--mint);color:var(--green-dark);font-size:10px}
+    .header-actions .pill-button:hover{background:#dfe3ff;transform:none}
+    main{min-height:calc(100vh - 66px);padding-bottom:20px;background:var(--paper)}
+    .hero{padding:14px 0 8px}
+    .hero-panel{min-height:0;padding:22px 19px 17px;border-radius:24px;background:linear-gradient(135deg,#29346d 0%,#4c59c8 58%,#6972e9 100%);box-shadow:0 18px 35px rgba(50,62,145,.18)}
+    .hero-panel:before,.hero-panel:after,.hero-side,.hero-meta{display:none}
+    .hero-copy{max-width:100%}
+    .hero .eyebrow{color:#e5e8ff;font-size:8px;letter-spacing:.13em}
+    .hero .eyebrow:before{background:var(--amber)}
+    .hero h1{max-width:350px;margin:8px 0 9px;font-size:32px;line-height:1.02;letter-spacing:-.055em}
+    .hero h1 span{color:var(--lime)}
+    .hero-copy>p{max-width:330px;margin:0 0 13px;color:#e1e4ff;font-size:11px;line-height:1.5}
+    .hero-actions{gap:7px}
+    .hero-actions .button{min-height:34px;padding:0 11px;border-radius:11px;font-size:9px}
+    .hero-actions .button:not(.light){border-color:rgba(255,255,255,.28);background:rgba(255,255,255,.1);color:#fff}
+    .hero-actions .button:not(.light):hover{background:rgba(255,255,255,.18);transform:none}
+    .searchbox{width:100%;min-height:44px;margin-top:16px;padding:0 12px;border:1px solid #eaecf3;border-radius:14px;box-shadow:0 6px 16px rgba(28,39,75,.08)}
+    .searchbox svg{color:var(--green)}
+    .searchbox input{font-size:11px}
+    .search-hint{font-size:9px}
+    .stats{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin:10px auto 17px}
+    .stat{gap:8px;padding:10px;border:1px solid var(--line);border-radius:15px;box-shadow:0 3px 10px rgba(22,34,63,.025)}
+    .stat-icon{width:31px;height:31px;border-radius:11px;background:var(--mint);color:var(--green);font-size:9px}
+    .stat b{font-size:10px;line-height:1.25}
+    .stat small{margin-top:2px;font-size:8px;line-height:1.25}
+    .app-layout{display:block;width:100%;margin:0 auto 20px}
+    .sidebar{position:static;display:block;width:min(100% - 28px,438px);margin:0 auto 20px}
+    .side-card{padding:0;border:0;background:transparent}
+    .side-title{display:none}
+    .side-heading{display:flex;align-items:baseline;justify-content:space-between;margin:0 1px 10px}
+    .side-heading strong{font-size:15px;letter-spacing:-.035em}
+    .side-heading span{color:var(--muted);font-size:9px}
+    .side-nav{grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+    .side-nav a{display:grid;justify-items:center;gap:6px;min-height:78px;padding:10px 4px;border:1px solid var(--line);border-radius:16px;background:var(--card);color:var(--ink);text-align:center;font-size:9px;box-shadow:0 3px 10px rgba(22,34,63,.025)}
+    .side-nav a:hover,.side-nav a.active{background:#fff;color:var(--green-dark);border-color:#daddfb}
+    .nav-glyph{display:grid;width:33px;height:33px;place-items:center;border-radius:11px;background:var(--mint);color:var(--green)}
+    .nav-glyph svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+    .side-note{display:flex;align-items:center;gap:9px;margin-top:10px;padding:12px;border:1px solid #f0e4c7;border-radius:15px;background:#fff9ed}
+    .side-note b{margin:0;font-size:10px}
+    .side-note p{flex:1;margin:0;color:var(--muted);font-size:8px;line-height:1.4}
+    .side-note .tiny-link{font-size:9px}
+    .content{min-width:0}
+    .section{margin:0 auto 14px;padding:17px 0;border-top:1px solid var(--line);scroll-margin-top:78px}
+    .section-head{display:flex;align-items:end;justify-content:space-between;gap:10px;margin:0 0 12px}
+    .section-head h2{margin:5px 0 0;font-size:21px;line-height:1.08;letter-spacing:-.045em}
+    .section-head p{max-width:185px;margin:0;color:var(--muted);font-size:8px;line-height:1.45}
+    .eyebrow{font-size:8px;letter-spacing:.13em}
+    .tiny-link{font-size:9px}
+    .feature-grid,.school-grid,.event-grid,.sports-grid,.service-grid{gap:8px}
+    .feature,.event-card,.service,.school,.panel,.sources-panel,.meal,.sport,.sources-panel,.disclaimer{border-color:var(--line);border-radius:16px;background:var(--card);box-shadow:0 3px 10px rgba(22,34,63,.025)}
+    .feature{min-height:132px;padding:13px}
+    .feature-top{margin-bottom:12px}
+    .feature-icon{width:31px;height:31px;border-radius:11px;background:var(--mint);color:var(--green);font-size:9px}
+    .feature h3,.event-card h3,.service h3,.school strong{font-size:10px;line-height:1.25}
+    .feature p,.event-card p,.service p{font-size:8px;line-height:1.45}
+    .feature a,.service a{font-size:8px}
+    .school{min-height:75px;padding:10px}
+    .school .school-kicker{font-size:7px}
+    .school strong{font-size:9px}
+    .school a{font-size:8px}
+    .school-toolbar{margin:14px 0 9px}
+    .school-toolbar h3{font-size:12px}
+    .school-count{font-size:8px}
+    .panel{padding:14px}
+    .panel h3{font-size:12px}
+    .panel>p,.link-row small{font-size:8px}
+    .link-row{padding:9px 10px;border-radius:11px}
+    .link-row b{font-size:9px}
+    .calendar-highlight{background:var(--green-dark)}
+    .calendar-highlight strong{color:var(--lime)}
+    .event-card{min-height:108px;padding:11px}
+    .event-type{font-size:7px}
+    .event-feed{padding:12px;border-radius:14px;background:#eceeff}
+    .event-feed b{font-size:10px}
+    .event-feed p{font-size:8px}
+    .event-feed .button{font-size:9px}
+    .sports-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .meal-grid{gap:8px}
+    .meal{padding:12px}
+    .meal h3{font-size:10px}
+    .meal strong{font-size:11px}
+    .meal small{font-size:8px}
+    .food-columns{gap:9px}
+    .food-list>div,.list-bullets li{font-size:8px}
+    .callout{padding:10px 12px;border-radius:13px;font-size:8px}
+    .health-banner{padding:13px;border-radius:15px;background:#fff1ed}
+    .health-banner small{font-size:7px}
+    .health-banner b{font-size:19px}
+    .health-banner span{font-size:8px}
+    .map-info{padding:16px;border-radius:18px;background:linear-gradient(145deg,#29346d,#4c59c8)}
+    .map-info h3{font-size:17px}
+    .map-info p,.map-info .address span{font-size:9px}
+    .map-frame,.map-frame iframe{min-height:235px;border-radius:16px}
+    .sources-panel,.disclaimer{padding:14px}
+    .sources-panel h3{font-size:12px}
+    .sources-panel p,.disclaimer{font-size:8px}
+    .source-links{gap:6px}
+    .source-links a{padding:6px 8px;border-radius:9px;font-size:8px}
+    .mobile-nav{position:fixed;z-index:60;bottom:0;left:50%;right:auto;transform:translateX(-50%);display:flex;width:min(480px,100%);justify-content:space-around;gap:3px;padding:7px 6px calc(7px + env(safe-area-inset-bottom));border:1px solid var(--line);border-bottom:0;border-radius:18px 18px 0 0;background:rgba(255,255,255,.96);box-shadow:0 -8px 24px rgba(24,35,72,.08);backdrop-filter:blur(18px)}
+    .mobile-nav a{display:grid;flex:1;justify-items:center;align-content:center;gap:2px;min-width:0;padding:2px;color:#7d8496;text-decoration:none;font-size:8px;font-weight:700}
+    .mobile-nav a .tab-icon{display:grid;width:28px;height:23px;place-items:center;border-radius:10px;color:currentColor}
+    .mobile-nav a .tab-icon svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+    .mobile-nav a.active{color:var(--green-dark)}
+    .mobile-nav a.active .tab-icon{background:var(--mint);color:var(--green)}
+    .mobile-nav a small{font-size:8px;font-weight:750}
+    body{padding-bottom:calc(65px + env(safe-area-inset-bottom))}
+    footer{padding:10px 0 22px;background:var(--paper)}
+    .footer-inner{font-size:8px}
+    .to-top{font-size:8px}
+    @media(min-width:650px){body{padding:22px 0;background:#e9edf4}.topbar{position:relative;border:1px solid var(--line);border-bottom:0;border-radius:26px 26px 0 0;box-shadow:0 30px 70px rgba(29,39,78,.1)}main{overflow:hidden;border:1px solid var(--line);border-top:0;border-bottom:0;box-shadow:0 30px 70px rgba(29,39,78,.1)}footer{border:1px solid var(--line);border-top:0;border-radius:0 0 26px 26px;box-shadow:0 25px 60px rgba(29,39,78,.08)}.mobile-nav{bottom:22px;border:1px solid var(--line);border-radius:18px;box-shadow:0 8px 26px rgba(24,35,72,.15)}}
+    @media(max-width:380px){.hero h1{font-size:29px}.hero-panel{padding:20px 16px 15px}.stats{gap:6px}.stat{padding:8px}.section-head{display:block}.section-head p{max-width:none;margin-top:7px}.side-nav{gap:6px}.side-nav a{min-height:72px;font-size:8px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  </style>
+  <style id="multi-screen-app">
+    body[data-screen="home"] .sidebar,body[data-screen="home"] .content{display:none}
+    body[data-screen="home"] #homeLaunchpad{display:block}
+    body[data-screen="home"] .app-layout{display:block;margin:0 auto 24px}
+    body[data-screen="home"] .home-launchpad{padding:0 0 14px}
+    .launchpad-heading{display:flex;justify-content:space-between;align-items:end;gap:12px;margin:4px 0 12px}
+    .launchpad-heading h2{margin:0;font-size:20px;letter-spacing:-.05em}
+    .launchpad-heading span{color:var(--muted);font-size:9px}
+    .launchpad-grid{display:grid;grid-template-columns:1fr 1fr;gap:9px}
+    .home-card{display:flex;align-items:center;gap:11px;min-height:75px;padding:11px;border:1px solid var(--line);border-radius:17px;background:var(--card);color:var(--ink);text-decoration:none;box-shadow:0 3px 12px rgba(31,43,88,.035);transition:transform .16s,border-color .16s,box-shadow .16s}
+    .home-card:hover{transform:translateY(-2px);border-color:#c9ceff;box-shadow:0 8px 20px rgba(49,60,143,.09)}
+    .home-card-icon{display:grid;place-items:center;width:37px;height:37px;flex:0 0 auto;border-radius:13px;background:var(--mint);color:var(--green);font-size:17px}
+    .home-card b{display:block;font-size:10px;line-height:1.25}
+    .home-card small{display:block;margin-top:3px;color:var(--muted);font-size:8px;line-height:1.25}
+    .home-card .card-arrow{margin-left:auto;color:#9ca3b6;font-size:16px}
+    .content{width:100%}
+    .screen-toolbar{display:none;align-items:center;gap:10px;margin:3px 0 12px}
+    .screen-toolbar a{display:inline-flex;align-items:center;gap:5px;min-height:32px;padding:0 10px;border:1px solid var(--line);border-radius:11px;background:#fff;color:var(--green-dark);font-size:9px;font-weight:800;text-decoration:none}
+    .screen-toolbar span{color:var(--muted);font-size:9px;font-weight:750}
+    body[data-screen]:not([data-screen="home"]) .hero,body[data-screen]:not([data-screen="home"]) .stats,body[data-screen]:not([data-screen="home"]) #homeLaunchpad{display:none}
+    body[data-screen]:not([data-screen="home"]) .app-layout{display:block;margin:0 auto 24px}
+    body[data-screen]:not([data-screen="home"]) .sidebar{display:none}
+    body[data-screen]:not([data-screen="home"]) .content{display:block}
+    body[data-screen]:not([data-screen="home"]) .screen-toolbar{display:flex}
+    body[data-screen]:not([data-screen="home"]) .content>.section{display:none}
+    body[data-screen]:not([data-screen="home"]) .content>.section.active-screen{display:block;margin:0;padding:0 0 18px;animation:screen-in .2s ease-out}
+    body[data-screen]:not([data-screen="home"]) .content>.no-results{display:none!important}
+    body[data-screen]:not([data-screen="home"]) footer{display:none}
+    .mobile-nav a.active{color:var(--green-dark)}
+    .mobile-nav a.active .tab-icon{background:var(--mint);color:var(--green)}
+    @keyframes screen-in{from{opacity:.45;transform:translateY(5px)}to{opacity:1;transform:translateY(0)}}
+    @media(prefers-reduced-motion:reduce){body[data-screen]:not([data-screen="home"]) .content>.section.active-screen{animation:none}}
+  </style>
 </head>
-<body>
+<body data-screen="home">
   <a class="skip" href="#main">Skip to content</a>
   <header class="topbar">
     <div class="wrap nav">
-      <a class="brand" href="#home" aria-label="LPU Campus Hub home"><span class="brand-mark">LPU</span><span>Campus Hub<small>Student guide · Phagwara</small></span></a>
+      <a class="brand" href="#home" aria-label="LPU Campus Hub home"><span class="brand-mark">LPU</span><span>Campus Hub<small>Student companion</small></span></a>
       <nav class="nav-links" id="topNav" aria-label="Primary navigation">
         <a href="#academics">Academics</a><a href="#life">Campus life</a><a href="#residence">Hostel & food</a><a href="#services">Services</a><a href="#map">Map</a>
       </nav>
-      <div class="header-actions"><a class="pill-button" href="https://ums.lpu.in/" target="_blank" rel="noopener">Open UMS ↗</a><button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">☰</button></div>
+      <div class="header-actions"><a class="pill-button" href="https://ums.lpu.in/" target="_blank" rel="noopener">UMS ↗</a><button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">☰</button></div>
     </div>
   </header>
 
@@ -47,11 +206,11 @@
     <section class="hero" id="home">
       <div class="wrap hero-panel">
         <div class="hero-copy">
-          <span class="eyebrow">For students, families and visitors</span>
-          <h1>Everything about<br><span>life at LPU.</span></h1>
-          <p>Find academic links, school and department information, events, sports, hostel and mess details, campus services and directions in one clear guide.</p>
-          <div class="hero-actions"><a class="button light" href="#academics">Explore the guide <span aria-hidden="true">↓</span></a><a class="button" href="https://www.lpu.in/" target="_blank" rel="noopener">Official LPU website ↗</a></div>
-          <label class="searchbox" for="hubSearch"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8" stroke="currentColor" stroke-width="1.8"/><path d="m16 16 4.5 4.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg><input id="hubSearch" type="search" placeholder="Search departments, hostel, events, sports…" autocomplete="off"><span class="search-hint">Search guide</span></label>
+          <span class="eyebrow">Lovely Professional University · Phagwara</span>
+          <h1>Your campus,<br><span>in one place.</span></h1>
+          <p>Find study info, events, hostel details, services and campus directions—right from your phone.</p>
+          <div class="hero-actions"><a class="button light" href="#academics">Explore campus <span aria-hidden="true">↓</span></a><a class="button" href="https://www.lpu.in/" target="_blank" rel="noopener">Official LPU ↗</a></div>
+          <label class="searchbox" for="hubSearch"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8" stroke="currentColor" stroke-width="1.8"/><path d="m16 16 4.5 4.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg><input id="hubSearch" type="search" placeholder="Search courses, mess, events…" autocomplete="off"><span class="search-hint">Search</span></label>
           <div class="hero-meta"><span><strong>Lovely Professional University</strong></span><span class="sep">•</span><span>Phagwara, Punjab</span><span class="sep">•</span><span>Independent student guide</span></div>
         </div>
         <div class="hero-side"><small>One place for campus essentials</small><strong>Study · Stay · Explore</strong><span>Student information, clearly organised</span></div>
@@ -65,21 +224,35 @@
       <div class="stat"><span class="stat-icon">24/7</span><span><b>Health support</b><small>University Health Centre helpline</small></span></div>
     </div>
 
+    <nav class="wrap home-launchpad" id="homeLaunchpad" aria-label="Explore campus sections">
+      <div class="launchpad-heading"><h2>Explore campus</h2><span>Tap a section to open it</span></div>
+      <div class="launchpad-grid">
+        <a class="home-card" data-search-item data-search="academics schools programmes courses cse computer science admission scholarship umS calendar" href="#academics"><span class="home-card-icon">▤</span><span><b>Academics</b><small>Schools, programmes, UMS</small></span><span class="card-arrow">›</span></a>
+        <a class="home-card" data-search-item data-search="events campus life activities clubs arts festivals" href="#life"><span class="home-card-icon">✦</span><span><b>Events & campus life</b><small>Activities, clubs, arts</small></span><span class="card-arrow">›</span></a>
+        <a class="home-card" data-search-item data-search="sports teams fitness facilities games" href="#sports"><span class="home-card-icon">◉</span><span><b>Sports</b><small>Teams, fitness, facilities</small></span><span class="card-arrow">›</span></a>
+        <a class="home-card" data-search-item data-search="hostel residence room food mess meals menu breakfast lunch dinner" href="#residence"><span class="home-card-icon">⌂</span><span><b>Hostel & food</b><small>Rooms, mess, meal times</small></span><span class="card-arrow">›</span></a>
+        <a class="home-card" data-search-item data-search="student services health hospital transport security support library" href="#services"><span class="home-card-icon">＋</span><span><b>Student services</b><small>Health, travel, support</small></span><span class="card-arrow">›</span></a>
+        <a class="home-card" data-search-item data-search="campus map location directions travel route" href="#map"><span class="home-card-icon">⌖</span><span><b>Campus map</b><small>Directions and travel</small></span><span class="card-arrow">›</span></a>
+        <a class="home-card" data-search-item data-search="official links sources lpu information disclaimer" href="#sources"><span class="home-card-icon">↗</span><span><b>Official links</b><small>Sources and information</small></span><span class="card-arrow">›</span></a>
+      </div>
+      <div class="no-results" id="homeNoResults" role="status">No matching section. Try “academics”, “mess”, “sports” or “map”.</div>
+    </nav>
+
     <div class="wrap app-layout">
-      <aside class="sidebar" aria-label="Guide sections">
-        <div class="side-card"><div class="side-title">Explore the guide</div><nav class="side-nav">
-          <a href="#academics"><span class="nav-glyph">01</span> Academics & schools</a>
-          <a href="#life"><span class="nav-glyph">02</span> Events & campus life</a>
-          <a href="#sports"><span class="nav-glyph">03</span> Sports & fitness</a>
-          <a href="#residence"><span class="nav-glyph">04</span> Hostels & mess</a>
-          <a href="#services"><span class="nav-glyph">05</span> Student services</a>
-          <a href="#map"><span class="nav-glyph">06</span> Campus map</a>
-          <a href="#sources"><span class="nav-glyph">07</span> Official sources</a>
+      <aside class="sidebar" aria-label="Quick access">
+        <div class="side-card"><div class="side-heading"><strong>Quick access</strong><span>Jump to a section</span></div><nav class="side-nav">
+          <a href="#academics"><span class="nav-glyph"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v16H6.5A2.5 2.5 0 0 0 4 21z"/><path d="M4 5.5v13A2.5 2.5 0 0 1 6.5 16H20M8 7h8M8 10h6"/></svg></span>Academics</a>
+          <a href="#life"><span class="nav-glyph"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5" width="17" height="16" rx="3"/><path d="M7.5 3v4M16.5 3v4M3.5 10h17M8 14h3M8 17h6"/></svg></span>Events</a>
+          <a href="#sports"><span class="nav-glyph"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m12 7 4 3-1.5 5h-5L8 10zM12 7V3M8 10l-4-1M14 15l2.5 4M8 15l-3 3M16 10l4-1"/></svg></span>Sports</a>
+          <a href="#residence"><span class="nav-glyph"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 20V7l9-4 9 4v13M3 10h18M7 20v-5h4v5M15 11h2M7 8h2M15 8h2"/></svg></span>Hostel & food</a>
+          <a href="#services"><span class="nav-glyph"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg></span>Services</a>
+          <a href="#map"><span class="nav-glyph"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3 6 6-3 6 3 6-3v15l-6 3-6-3-6 3zM9 3v15M15 6v15"/></svg></span>Campus map</a>
         </nav></div>
-        <div class="side-note"><b>Need the latest notice?</b><p>Use UMS and official LPU pages for live schedules, account-specific details and urgent updates.</p><a class="tiny-link" href="https://ums.lpu.in/" target="_blank" rel="noopener">Go to UMS ↗</a></div>
+        <div class="side-note"><b>Need a student portal?</b><p>Open UMS for attendance, fees, notices and your student account.</p><a class="tiny-link" href="https://ums.lpu.in/" target="_blank" rel="noopener">Open UMS ↗</a></div>
       </aside>
 
       <div class="content" id="contentArea">
+        <div class="screen-toolbar"><a href="#home" aria-label="Back to home">‹ Home</a><span id="screenLabel">Campus guide</span></div>
         <div class="no-results" id="noResults" role="status">No matching guide items. Try another search term, such as “hostel”, “CSE” or “sports”.</div>
         <section class="section filter-section" id="academics" data-filter-section>
           <div class="section-head"><div><span class="eyebrow">Study at LPU</span><h2>Academics, programmes<br>and every school.</h2></div><p>Explore the official programme directory, academic calendar, scholarship information and university systems. Programme rules can differ by school and batch.</p></div>
@@ -243,8 +416,12 @@
     </div>
   </main>
 
-  <nav class="mobile-nav" aria-label="Quick sections">
-    <a href="#academics"><span>⌂</span>Academics</a><a href="#life"><span>✦</span>Events</a><a href="#sports"><span>◉</span>Sports</a><a href="#residence"><span>▤</span>Hostel</a><a href="#services"><span>＋</span>Services</a>
+  <nav class="mobile-nav" id="appTabBar" aria-label="Main navigation">
+    <a class="active" href="#home" aria-label="Home"><span class="tab-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-7h-6v7H4a1 1 0 0 1-1-1z"/></svg></span><small>Home</small></a>
+    <a href="#academics" aria-label="Academics"><span class="tab-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v16H6.5A2.5 2.5 0 0 0 4 21z"/><path d="M4 5.5v13A2.5 2.5 0 0 1 6.5 16H20M8 7h8M8 10h6"/></svg></span><small>Study</small></a>
+    <a href="#life" aria-label="Events"><span class="tab-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5" width="17" height="16" rx="3"/><path d="M7.5 3v4M16.5 3v4M3.5 10h17M8 14h3M8 17h6"/></svg></span><small>Events</small></a>
+    <a href="#residence" aria-label="Hostel"><span class="tab-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 20V7l9-4 9 4v13M3 10h18M7 20v-5h4v5M15 11h2M7 8h2M15 8h2"/></svg></span><small>Hostel</small></a>
+    <a href="#map" aria-label="Map"><span class="tab-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3 6 6-3 6 3 6-3v15l-6 3-6-3-6 3zM9 3v15M15 6v15"/></svg></span><small>Map</small></a>
   </nav>
 
   <footer><div class="wrap footer-inner"><span><span class="footer-brand">LPU Campus Hub</span> · Independent student guide · Information checked 2 Nov 2026</span><a class="to-top" href="#home">Back to top ↑</a></div></footer>
@@ -252,6 +429,7 @@
     const searchInput=document.getElementById('hubSearch');
     const searchableItems=[...document.querySelectorAll('[data-search-item]')];
     const filterSections=[...document.querySelectorAll('[data-filter-section]')];
+    const homeCards=[...document.querySelectorAll('#homeLaunchpad .home-card')];
     const noResults=document.getElementById('noResults');
     function filterGuide(){
       const query=searchInput.value.trim().toLocaleLowerCase();
@@ -268,8 +446,44 @@
         section.classList.toggle('section-empty',Boolean(query)&&matches===0);
       }
       noResults.style.display=query&&visible===0?'block':'none';
+      document.getElementById('homeNoResults').style.display=query&&!homeCards.some(card=>!card.hidden)?'block':'none';
     }
     searchInput.addEventListener('input',filterGuide);
+    const screenNames={home:'Home',academics:'Academics',life:'Events & campus life',sports:'Sports',residence:'Hostel & food',services:'Student services',map:'Campus map',sources:'Official links'};
+    const appTabs=[...document.querySelectorAll('#appTabBar a')];
+    const sections=[...document.querySelectorAll('#contentArea > .section')];
+    const tabForScreen={home:'#home',academics:'#academics',life:'#life',sports:'#life',residence:'#residence',services:'#home',map:'#map',sources:'#home'};
+    function currentScreen(){const id=location.hash.replace(/^#/,'');return screenNames[id]?id:'home'}
+    function renderScreen(screen){
+      const active=screenNames[screen]?screen:'home';
+      document.body.dataset.screen=active;
+      document.getElementById('screenLabel').textContent=screenNames[active];
+      for(const section of sections)section.classList.toggle('active-screen',section.id===active);
+      const activeTab=tabForScreen[active];
+      for(const tab of appTabs){
+        const selected=tab.getAttribute('href')===activeTab;
+        tab.classList.toggle('active',selected);
+        if(selected)tab.setAttribute('aria-current','page');else tab.removeAttribute('aria-current');
+      }
+      window.scrollTo({top:0,behavior:'auto'});
+    }
+    function openScreen(screen,addHistory=true){
+      if(!screenNames[screen])return;
+      const hash='#'+screen;
+      if(addHistory&&location.hash!==hash)history.pushState({screen},'',hash);
+      renderScreen(screen);
+    }
+    document.addEventListener('click',event=>{
+      const link=event.target.closest('a[href^="#"]');
+      if(!link)return;
+      const screen=link.getAttribute('href').slice(1);
+      if(!screenNames[screen])return;
+      event.preventDefault();
+      openScreen(screen);
+    });
+    window.addEventListener('popstate',()=>renderScreen(currentScreen()));
+    window.addEventListener('hashchange',()=>renderScreen(currentScreen()));
+    renderScreen(currentScreen());
     const menuToggle=document.getElementById('menuToggle');
     const topNav=document.getElementById('topNav');
     menuToggle.addEventListener('click',()=>{const open=topNav.classList.toggle('open');menuToggle.setAttribute('aria-expanded',String(open));menuToggle.setAttribute('aria-label',open?'Close menu':'Open menu')});
