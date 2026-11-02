@@ -1,35 +1,32 @@
 # LPU Campus Hub
 
-An independent student guide for Lovely Professional University. It presents campus information in a mobile app-style interface, with a separate screen for each area.
+An independent student guide for Lovely Professional University, built as a mobile-friendly installable web app.
 
 **[Open the live app](https://gleeful-vacherin-699b68.netlify.app/)** · **[Download the Android app](https://gleeful-vacherin-699b68.netlify.app/LPU_Campus_Hub.apk)**
 
 ## App screens
 
-- App-style home dashboard with live counts for today's saved classes, open tasks and upcoming events
-- Campus search that opens the matching screen, plus an export/import backup to move saved notes between phones
-- Personal weekly timetable with calendar reminders, CA planner and SGPA estimate calculator
-- Mess menu notes and meal ratings saved on the device
-- Student-added event calendar, transport directions, bill split and laundry information
-- Local lost-and-found notes, feedback drafts, offline status and academic calendar
-- Personal reminders with notification support while the app is allowed to run, plus calendar export
-- Hostel/campus service-request notes with local status tracking and an official UMS / RMS link
-- Community post drafts with on-device moderation controls
-- Owner update-draft manager with JSON export for review before a separate site publish
-- Dark mode and English, Hindi or Punjabi controls
-- Academics, programmes, schools and student resources
-- Events and campus life
-- Hostel, residence and mess information
-- Sports and fitness
-- Health, transport and student services
-- Campus map, directions and official university links
-- Bottom navigation with separate screens and browser Back support
+- Separate screens for academics, events, sports, hostels, mess, maps and campus services
+- Student search, daily dashboard, timetable, reminders, CA planner and SGPA estimate
+- Mess notes, meal ratings, personal events, laundry and transport tools
+- Lost-and-found notes, feedback drafts, offline status and academic calendar
+- Community board with posts sent to the shared backend for owner review
+- Owner moderation screen for approving or hiding shared posts
+- Personal service-request notes with a direct UMS / RMS link
+- Dark mode, English / Hindi / Punjabi controls and mobile navigation
+- Export/import backup for personal notes when moving phones
 
-The UMS button opens LPU's official sign-in page. Campus Hub does not collect or store login credentials. Profile details, menus, class schedules, events and planner items stay in local browser storage on the device. Student-added notes are not shared with other devices or represented as official LPU notices. The update manager is a local draft tool, not a protected live admin dashboard; the community board and service tracker are also device-local. Notification timing depends on browser and operating-system behavior, so export reminders to the phone calendar for dependable alerts while the app is closed.
+## Shared data and privacy
 
-## Run or publish
+The shared board uses a Netlify Function and Netlify Blobs in Singapore. Public submissions are stored as pending and appear to other visitors only after the owner approves them. The admin key is read from the Netlify environment variable `LPU_HUB_ADMIN_KEY`; it is not part of the app files or GitHub repository. Entering the key on the moderation screen keeps it in that browser tab only.
 
-This is a static Progressive Web App. It has no build step; open `index.html` or upload the folder to a static host. On Android, open the HTTPS link in Chrome, then choose **Install app** or **Add to Home screen** from the browser menu.
+The board does not request a name, phone number, email or student ID. It rejects links and likely phone/email details. Avoid posting private information anyway. Timetables, planner items, menu notes, ratings, feedback, service-request notes and reminder data remain in local browser storage and are not sent to the backend. Official requests still go through LPU UMS / RMS.
+
+## Build and deploy on Netlify
+
+The project uses `npm run build` to prepare the static files in `dist/`; Netlify publishes that folder and deploys the function from `netlify/functions/`. Connect the repository to the existing Netlify project, set the production environment variable `LPU_HUB_ADMIN_KEY` to a random secret of at least 24 characters, then deploy. Never put the key in source control. The GitHub Pages copy, if enabled, is static and does not provide the shared backend.
+
+On Android, open the HTTPS app in Chrome and choose **Install app** or **Add to Home screen**.
 
 ## Project status
 

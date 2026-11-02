@@ -1,4 +1,4 @@
-const CACHE_NAME = "lpu-campus-hub-v10";
+const CACHE_NAME = "lpu-campus-hub-v11";
 const APP_FILES = ["./", "./index.html", "./manifest.webmanifest", "./icon.svg", "./icon-192.png", "./icon-512.png"];
 
 self.addEventListener("install", event => {
@@ -16,6 +16,7 @@ self.addEventListener("activate", event => {
 self.addEventListener("fetch", event => {
   const request = event.request;
   if (request.method !== "GET" || new URL(request.url).origin !== self.location.origin) return;
+  if (new URL(request.url).pathname.startsWith("/api/")) return;
   event.respondWith(
     caches.match(request).then(cached => {
       if (cached) return cached;
