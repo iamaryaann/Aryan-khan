@@ -1,0 +1,18 @@
+{
+  "name": "LPU Campus Hub",
+  "short_name": "LPU Hub",
+  "description": "A student guide to Lovely Professional University campus life.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f3f5f1",
+  "theme_color": "#0c3b30",
+  "icons": [
+    {
+      "src": "./icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
