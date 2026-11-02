@@ -1,0 +1,8 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "com.iamaryaann.lpucampushub",
+    "sha256_cert_fingerprints": ["C5:4E:C3:02:FD:78:42:7C:20:9F:B1:D1:AA:ED:E7:8E:FB:68:E8:5F:D4:1C:06:98:CE:F7:39:C6:4E:16:2E:DB"]
+  }
+}]
