@@ -6,7 +6,8 @@ An independent student guide for Lovely Professional University. It presents cam
 
 ## App screens
 
-- Home dashboard with quick actions, profile summary and campus search
+- App-style home dashboard with live counts for today's saved classes, open tasks and upcoming events
+- Campus search that opens the matching screen, plus an export/import backup to move saved notes between phones
 - Personal weekly timetable with calendar reminders, CA planner and SGPA estimate calculator
 - Mess menu notes and meal ratings saved on the device
 - Student-added event calendar, transport directions, bill split and laundry information
