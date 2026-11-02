@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#29346d">
+  <meta name="theme-color" content="#1b2a40">
   <meta name="description" content="LPU Campus Hub: a student guide to academics, all university schools, events, sports, hostels, mess, maps, and campus services.">
   <meta property="og:title" content="LPU Campus Hub — Student Guide">
   <meta property="og:description" content="Academics, campus life, hostels, mess, sports, student services and directions in one guide.">
@@ -336,6 +336,19 @@
     .mobile-nav a small{font-size:10px}
     @media(max-width:360px){.dashboard-module b{font-size:10px}.dashboard-module small{font-size:8px}.section-head h2{font-size:23px}}
   </style>
+  <style id="student-app-ui">
+    :root{--ink:#172238;--muted:#718096;--paper:#f4f6f9;--card:#fff;--green:#f27645;--green-dark:#b94d2d;--mint:#fff0e9;--lime:#ffd17c;--line:#e5e9ef;--shadow:0 10px 26px rgba(20,35,60,.08)}
+    body{background:#f4f6f9;color:var(--ink)}.brand-mark{background:#19283e;box-shadow:none}.brand small{letter-spacing:.08em}
+    .dashboard-kicker{color:#c65c39}.dashboard-greeting h1{letter-spacing:-.045em}.dashboard-avatar{border-color:#f2d5c9;background:#fff8f4;color:#b94d2d}
+    .student-summary-card{margin:0 0 15px;padding:15px;border-radius:20px;background:linear-gradient(135deg,#1b2a40,#263d57);color:#fff;box-shadow:0 13px 26px rgba(22,39,58,.18)}
+    .student-summary-top{display:flex;align-items:center;gap:11px}.student-initials{display:grid;width:40px;height:40px;place-items:center;border-radius:14px;background:#f5b36d;color:#263448;font-size:15px;font-weight:900}.student-summary-copy{display:grid;gap:2px;min-width:0}.student-summary-copy>span{color:#c9d6e4;font-size:8px;font-weight:800;letter-spacing:.11em}.student-summary-copy b{font-size:13px}.student-summary-copy small{color:#c3cedb;font-size:10px}.summary-edit{margin-left:auto;color:#ffd08a;font-size:10px;font-weight:800;text-decoration:none}
+    .student-metrics{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px;margin-top:14px}.student-metrics>a{display:grid;gap:5px;min-height:50px;padding:8px 7px;border:1px solid rgba(255,255,255,.12);border-radius:12px;background:rgba(255,255,255,.07);color:#fff;text-decoration:none}.student-metrics small{color:#cbd5df;font-size:7px;font-weight:800;letter-spacing:.04em}.student-metrics b{font-size:9px}.summary-note{margin:10px 1px 0;color:#cad4df;font-size:9px;line-height:1.4}
+    .dashboard-module-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}.dashboard-module{min-height:82px;justify-items:center;align-content:center;text-align:center;padding:8px 5px;border:1px solid #e7eaf0;border-radius:17px;box-shadow:0 3px 8px rgba(26,42,63,.035)}.module-icon{width:36px;height:36px;margin:0 0 4px;border-radius:13px}.icon-attendance{background:#e7f5ee;color:#26805a}.icon-timetable{background:#eaf0ff;color:#4667bc}.icon-tasks{background:#fff3dd;color:#ae7723}.icon-calc{background:#f0eaff;color:#7754b0}.icon-mess{background:#fff0e8;color:#c55c36}.icon-qr{background:#e9f6f4;color:#287f75}.icon-laundry{background:#eaf2ff;color:#4375ba}.icon-bills{background:#fff4d9;color:#a47916}.icon-map{background:#f2eaff;color:#7652ab}.icon-pass{background:#ffecef;color:#be4e63}.icon-holidays{background:#e8f5ef;color:#35805c}.icon-sos{background:#ffebe5;color:#c14e32}
+    .dashboard-feature-card,.dashboard-info-card{display:flex;align-items:center;gap:10px;padding:12px;border:1px solid var(--line);border-radius:15px;background:#fff;color:var(--ink);text-decoration:none}.feature-badge{display:grid;width:35px;height:35px;flex:0 0 auto;place-items:center;border-radius:12px;background:#f1eaff;color:#7854b3;font-size:18px}.dashboard-feature-card b,.dashboard-info-card b{display:block;font-size:11px}.dashboard-feature-card small,.dashboard-info-card small{display:block;margin-top:3px;color:var(--muted);font-size:9px;line-height:1.35}.feature-open{margin-left:auto;color:#bd5837;font-size:9px;font-weight:800;white-space:nowrap}.dashboard-lower-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:8px}.dashboard-info-card{display:block;min-height:83px}.dashboard-info-card>span{display:block;margin-bottom:7px;color:#c05a38;font-size:7px;font-weight:850;letter-spacing:.1em}
+    .tool-card{margin:10px 0;padding:15px;border:1px solid var(--line);border-radius:16px;background:#fff}.tool-card h3{margin:0 0 6px;font-size:14px}.tool-card p{margin:0 0 10px;color:var(--muted);font-size:11px;line-height:1.5}.tool-form{display:grid;gap:10px}.tool-form label{display:grid;gap:5px;color:#58677a;font-size:10px;font-weight:750}.tool-form input,.tool-form select{width:100%;min-height:42px;padding:9px 11px;border:1px solid #dfe4eb;border-radius:11px;background:#fff;color:var(--ink);font:inherit;font-size:12px}.tool-form .button{width:max-content;min-height:40px;border:0;border-radius:11px;background:#bd5737;font-size:11px}.form-row{display:grid;grid-template-columns:1fr 1fr;gap:9px}.form-row.triple{grid-template-columns:1.1fr .8fr .8fr}.task-list{display:grid;gap:8px;margin-top:11px}.task-item{display:flex;align-items:center;gap:9px;padding:10px;border:1px solid var(--line);border-radius:12px;background:#fff}.task-item input{width:18px;height:18px;accent-color:#c35b38}.task-item span{min-width:0;flex:1;font-size:11px}.task-item small{display:block;margin-top:2px;color:var(--muted);font-size:9px}.task-item.is-done span{text-decoration:line-through;color:#8a95a4}.task-delete{border:0;background:transparent;color:#b34b3d;font-size:18px}.result-card{margin-top:10px;padding:13px;border-radius:13px;background:#fff3ea;color:#843f2a;font-size:12px;font-weight:800}.quick-screen-grid{display:grid;grid-template-columns:1fr 1fr;gap:9px}
+    .mobile-nav a.active{color:#a9472b}.mobile-nav a.active .tab-icon{background:#fff0e8;color:#bb5534}.screen-toolbar a{color:#a9472b}.dashboard-section-heading a{color:#b64e2e}
+    @media(max-width:360px){.dashboard-module-grid{gap:6px}.dashboard-module{min-height:76px}.module-icon{width:32px;height:32px}.student-summary-card{padding:12px}.student-metrics{gap:4px}.student-metrics>a{padding:7px 5px}.student-metrics b{font-size:8px}}
+  </style>
 </head>
 <body data-screen="home">
   <a class="skip" href="#main">Skip to content</a>
@@ -373,24 +386,37 @@
 
     <section class="home-dashboard" id="homeDashboard" aria-label="Student dashboard">
       <div class="dashboard-wrap">
-        <div class="dashboard-greeting"><div><span class="dashboard-kicker">LOVELY PROFESSIONAL UNIVERSITY</span><h1>Welcome to LPU</h1><p>Your campus, organised for you.</p></div><span class="dashboard-avatar" aria-hidden="true">LPU</span></div>
-        <label class="dashboard-search" for="appSearch"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 4.5 4.5"/></svg><input id="appSearch" type="search" placeholder="Search academics, hostel, services…" autocomplete="off"></label>
-        <a class="portal-card" href="https://ums.lpu.in/lpuums/" target="_blank" rel="noopener noreferrer" aria-label="Open official LPU UMS student login">
-          <span class="portal-kicker">OFFICIAL UNIVERSITY PORTAL</span><span class="portal-title">UMS Student Login</span><span class="portal-detail">Attendance · marks · courses · timetable · fees</span><span class="portal-action">Open secure portal <span aria-hidden="true">↗</span></span>
-        </a>
-        <div class="dashboard-section-heading"><h2>Quick access</h2><a href="#more">All services <span aria-hidden="true">›</span></a></div>
-        <div class="dashboard-module-grid" aria-label="Campus modules">
-          <a class="dashboard-module" data-search-item data-search="academics schools programmes courses cse computer science admission scholarship calendar" href="#academics"><span class="module-icon icon-academics">▤</span><b>Academics</b><small>Courses & schools</small></a>
-          <a class="dashboard-module" data-search-item data-search="events campus life activities clubs arts festivals notices" href="#life"><span class="module-icon icon-events">▣</span><b>Events</b><small>Campus life</small></a>
-          <a class="dashboard-module" data-search-item data-search="sports teams fitness facilities games" href="#sports"><span class="module-icon icon-sports">◉</span><b>Sports</b><small>Teams & fitness</small></a>
-          <a class="dashboard-module" data-search-item data-search="hostel residence room food mess meals menu breakfast lunch dinner" href="#residence"><span class="module-icon icon-hostel">⌂</span><b>Hostel & mess</b><small>Rooms & meals</small></a>
-          <a class="dashboard-module" data-search-item data-search="student services health hospital transport security support library" href="#services"><span class="module-icon icon-services">＋</span><b>Services</b><small>Help & facilities</small></a>
-          <a class="dashboard-module" data-search-item data-search="campus map location directions travel route" href="#map"><span class="module-icon icon-map">⌖</span><b>Campus map</b><small>Places & routes</small></a>
+        <div class="dashboard-greeting"><div><span class="dashboard-kicker">LOVELY PROFESSIONAL UNIVERSITY</span><h1>Hi, <span id="dashboardName">Student</span></h1><p id="dashboardCourse">Your campus dashboard</p></div><a class="dashboard-avatar" href="#profile" aria-label="Open profile">LPU</a></div>
+        <section class="student-summary-card" aria-label="Student dashboard summary">
+          <div class="student-summary-top"><div class="student-initials" id="studentInitials">L</div><div class="student-summary-copy"><span>STUDENT DASHBOARD</span><b id="summaryName">LPU student</b><small id="summaryCourse">Independent campus guide</small></div><a href="#profile" class="summary-edit">Edit</a></div>
+          <div class="student-metrics">
+            <a href="https://ums.lpu.in/lpuums/" target="_blank" rel="noopener noreferrer"><small>ATTENDANCE</small><b>Open UMS</b></a>
+            <a href="https://ums.lpu.in/lpuums/" target="_blank" rel="noopener noreferrer"><small>CGPA</small><b>Open UMS</b></a>
+            <a href="#classes"><small>TIMETABLE</small><b>View portal</b></a>
+            <a href="#tasks"><small>MY TASKS</small><b><span id="taskCount">0</span> open</b></a>
+          </div>
+          <p class="summary-note">Personal marks and attendance stay in the official UMS. This guide never invents them.</p>
+        </section>
+        <label class="dashboard-search" for="appSearch"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 4.5 4.5"/></svg><input id="appSearch" type="search" placeholder="Search tools, hostel, events…" autocomplete="off"></label>
+        <div class="dashboard-section-heading"><h2>Quick actions</h2><a href="#campus">All services <span aria-hidden="true">›</span></a></div>
+        <div class="dashboard-module-grid" aria-label="Student app shortcuts">
+          <a class="dashboard-module" data-search-item data-search="attendance percentage ums marks private student portal" href="https://ums.lpu.in/lpuums/" target="_blank" rel="noopener noreferrer"><span class="module-icon icon-attendance">◔</span><b>Attendance</b></a>
+          <a class="dashboard-module" data-search-item data-search="timetable classes schedule lecture courses ums" href="#classes"><span class="module-icon icon-timetable">▦</span><b>Timetable</b></a>
+          <a class="dashboard-module" data-search-item data-search="ca tasks assignment deadline planner" href="#tasks"><span class="module-icon icon-tasks">☷</span><b>CA & Tasks</b></a>
+          <a class="dashboard-module" data-search-item data-search="sgpa cgpa calculator grade credits" href="#sgpa"><span class="module-icon icon-calc">▦</span><b>SGPA Calc</b></a>
+          <a class="dashboard-module" data-search-item data-search="mess menu food breakfast lunch dinner hostel meal" href="#residence"><span class="module-icon icon-mess">▤</span><b>Mess Menu</b></a>
+          <a class="dashboard-module" data-search-item data-search="meal qr mess pass umS dining" href="https://ums.lpu.in/lpuums/" target="_blank" rel="noopener noreferrer"><span class="module-icon icon-qr">▦</span><b>Meal QR</b></a>
+          <a class="dashboard-module" data-search-item data-search="laundry hostel washing clothes residence" href="#laundry"><span class="module-icon icon-laundry">⌑</span><b>Laundry</b></a>
+          <a class="dashboard-module" data-search-item data-search="bill split expense share calculator friends" href="#bills"><span class="module-icon icon-bills">₹</span><b>Bill Split</b></a>
+          <a class="dashboard-module" data-search-item data-search="lpu campus map directions block navigation" href="#map"><span class="module-icon icon-map">⌖</span><b>LPU Map</b></a>
+          <a class="dashboard-module" data-search-item data-search="gate pass hostel leave ums permission" href="https://ums.lpu.in/lpuums/" target="_blank" rel="noopener noreferrer"><span class="module-icon icon-pass">↗</span><b>Gate Pass</b></a>
+          <a class="dashboard-module" data-search-item data-search="holidays academic calendar dates exam" href="#holidays"><span class="module-icon icon-holidays">▣</span><b>Holidays</b></a>
+          <a class="dashboard-module" data-search-item data-search="rms sos help support emergency services" href="#services"><span class="module-icon icon-sos">＋</span><b>RMS / SOS</b></a>
         </div>
-        <div class="no-results" id="homeNoResults" role="status">No matching section. Try “academics”, “mess”, “sports” or “map”.</div>
-        <a class="updates-card" href="#life"><span class="updates-icon">✦</span><span><b>Events & university updates</b><small>Open official event information and campus life.</small></span><span class="updates-arrow">›</span></a>
-        <a class="touch-app-link" href="https://play.google.com/store/apps/details?id=ums.lovely.university" target="_blank" rel="noopener noreferrer"><span class="touch-mark">LPU</span><span><b>Official LPU Touch</b><small>Open the university's student app listing</small></span><span class="updates-arrow">↗</span></a>
-        <p class="app-independence-note">Campus Hub is an independent student guide. Sign in only on official LPU services.</p>
+        <div class="no-results" id="homeNoResults" role="status">No matching shortcut. Try “classes”, “mess”, “SGPA” or “map”.</div>
+        <div class="dashboard-feature-row"><a class="dashboard-feature-card" href="#map"><span class="feature-badge">⌖</span><span><b>Official LPU Campus Map</b><small>Directions, blocks and campus routes</small></span><span class="feature-open">Open ↗</span></a></div>
+        <div class="dashboard-lower-grid"><a class="dashboard-info-card" href="#tasks"><span>MY PLANNER</span><b>Upcoming tasks</b><small id="taskPreview">Add your first CA or deadline</small></a><a class="dashboard-info-card" href="#residence"><span>HOSTEL & FOOD</span><b>Mess timings</b><small>Breakfast · lunch · snacks · dinner</small></a></div>
+        <p class="app-independence-note">Independent student guide · Personal UMS data opens only on LPU’s official portal.</p>
       </div>
     </section>
 
@@ -561,6 +587,51 @@
           </div>
         </section>
 
+        <section class="section" id="classes">
+          <div class="section-head"><div><span class="eyebrow">Your study space</span><h2>Classes and<br>timetable.</h2></div><p>Open your official timetable and class resources securely through LPU UMS. Your personal schedule stays inside the university portal.</p></div>
+          <div class="official-portal-panel"><h3>Today's classes</h3><p>Class times, rooms and last-minute changes are personal to your section. Check the official timetable before leaving.</p><a class="button" href="https://ums.lpu.in/lpuums/" target="_blank" rel="noopener noreferrer">Open timetable in UMS ↗</a></div>
+          <div class="more-grid"><a class="more-card" href="#academics"><span class="more-card-icon">▤</span><span><b>Courses & schools</b><small>Browse programmes and departments</small></span></a><a class="more-card" href="#tasks"><span class="more-card-icon">☷</span><span><b>CA planner</b><small>Keep track of your own deadlines</small></span></a><a class="more-card" href="#sgpa"><span class="more-card-icon">∑</span><span><b>SGPA calculator</b><small>Estimate from credits and grades</small></span></a><a class="more-card" href="#holidays"><span class="more-card-icon">▣</span><span><b>Academic calendar</b><small>Official dates and exam windows</small></span></a></div>
+        </section>
+
+        <section class="section" id="tasks">
+          <div class="section-head"><div><span class="eyebrow">Personal planner</span><h2>CA & task<br>tracker.</h2></div><p>Add assignments and reminders here. Items are saved only in this browser on this phone.</p></div>
+          <div class="tool-card"><form class="tool-form" id="taskForm"><div class="form-row"><label>Task or assignment<input id="taskTitle" required maxlength="80" placeholder="e.g. DBMS CA 2"></label><label>Due date<input id="taskDue" type="date"></label></div><label>Course / subject<input id="taskCourse" maxlength="50" placeholder="e.g. CSE 202"></label><button class="button" type="submit">Add to planner</button></form><div class="task-list" id="taskList" aria-live="polite"></div></div>
+          <p class="callout"><b>Reminder:</b> this is a personal checklist, not an official LPU deadline feed. Confirm submission dates in UMS or with your faculty.</p>
+        </section>
+
+        <section class="section" id="sgpa">
+          <div class="section-head"><div><span class="eyebrow">Study helper</span><h2>SGPA<br>calculator.</h2></div><p>Enter each course's credits and grade points to estimate a weighted SGPA. Verify the official result in UMS.</p></div>
+          <div class="tool-card"><form class="tool-form" id="sgpaForm"><div class="form-row"><label>Course 1 credits<input type="number" min="0" step="0.5" value="4" data-credit></label><label>Grade points<input type="number" min="0" max="10" step="0.1" placeholder="0–10" data-grade required></label></div><div class="form-row"><label>Course 2 credits<input type="number" min="0" step="0.5" value="4" data-credit></label><label>Grade points<input type="number" min="0" max="10" step="0.1" placeholder="0–10" data-grade required></label></div><div class="form-row"><label>Course 3 credits<input type="number" min="0" step="0.5" value="3" data-credit></label><label>Grade points<input type="number" min="0" max="10" step="0.1" placeholder="0–10" data-grade required></label></div><button class="button" type="submit">Calculate estimate</button></form><div class="result-card" id="sgpaResult" aria-live="polite">Add grade points to calculate.</div></div>
+        </section>
+
+        <section class="section" id="bills">
+          <div class="section-head"><div><span class="eyebrow">Roommate utility</span><h2>Split a shared<br>bill.</h2></div><p>Quickly divide a common expense evenly. This calculator does not transfer money.</p></div>
+          <div class="tool-card"><form class="tool-form" id="billForm"><div class="form-row"><label>Total bill (₹)<input id="billAmount" type="number" min="0" step="0.01" placeholder="e.g. 840" required></label><label>People<input id="billPeople" type="number" min="1" step="1" value="2" required></label></div><button class="button" type="submit">Split equally</button></form><div class="result-card" id="billResult" aria-live="polite">Enter the bill amount and number of people.</div></div>
+        </section>
+
+        <section class="section" id="laundry">
+          <div class="section-head"><div><span class="eyebrow">Hostel living</span><h2>Laundry and<br>residence help.</h2></div><p>Laundry arrangements, charges and collection times depend on the current hostel and service provider.</p></div>
+          <div class="tool-card"><h3>Check your hostel's current service</h3><p>Ask the hostel reception or residence office about the laundry counter, token or app process, collection window, pricing and lost-item procedure.</p><a class="button" href="https://www.lpu.in/student-services/residence.php" target="_blank" rel="noopener noreferrer">Official residence information ↗</a></div>
+          <div class="more-grid"><a class="more-card" href="#residence"><span class="more-card-icon">⌂</span><span><b>Hostel & mess</b><small>Room and dining details</small></span></a><a class="more-card" href="#services"><span class="more-card-icon">＋</span><span><b>Student services</b><small>Support and official contacts</small></span></a></div>
+        </section>
+
+        <section class="section" id="holidays">
+          <div class="section-head"><div><span class="eyebrow">Dates and sessions</span><h2>Academic calendar<br>and holidays.</h2></div><p>Use the university calendar and current notices for official term dates, exams, breaks and holidays.</p></div>
+          <div class="official-portal-panel"><h3>Official academic calendar</h3><p>Calendar entries can vary by programme and batch. Check the current calendar and your UMS notices.</p><a class="button" href="https://www.lpu.in/academics/calendar-regular-programmes.php" target="_blank" rel="noopener noreferrer">View LPU calendar ↗</a></div>
+          <div class="more-grid"><a class="more-card" href="#life"><span class="more-card-icon">▣</span><span><b>Campus events</b><small>Official event stories and updates</small></span></a><a class="more-card" href="https://ums.lpu.in/lpuums/" target="_blank" rel="noopener noreferrer"><span class="more-card-icon">↗</span><span><b>My UMS notices</b><small>Account-specific announcements</small></span></a></div>
+        </section>
+
+        <section class="section" id="campus">
+          <div class="section-head"><div><span class="eyebrow">Explore LPU</span><h2>Campus<br>directory.</h2></div><p>Each area opens in its own app screen. Official links are marked and open LPU or UMS.</p></div>
+          <div class="quick-screen-grid"><a class="more-card" href="#academics"><span class="more-card-icon">▤</span><span><b>Academics</b><small>Schools and courses</small></span></a><a class="more-card" href="#life"><span class="more-card-icon">▣</span><span><b>Events & clubs</b><small>Campus life and organisations</small></span></a><a class="more-card" href="#sports"><span class="more-card-icon">◉</span><span><b>Sports & fitness</b><small>Facilities and teams</small></span></a><a class="more-card" href="#residence"><span class="more-card-icon">⌂</span><span><b>Hostel & mess</b><small>Rooms, food and timings</small></span></a><a class="more-card" href="#map"><span class="more-card-icon">⌖</span><span><b>Campus map</b><small>Directions and travel</small></span></a><a class="more-card" href="#services"><span class="more-card-icon">＋</span><span><b>Student services</b><small>Health and transport</small></span></a><a class="more-card" href="#holidays"><span class="more-card-icon">◷</span><span><b>Calendar</b><small>Dates and holidays</small></span></a><a class="more-card" href="#sources"><span class="more-card-icon">↗</span><span><b>Official links</b><small>Verified university pages</small></span></a></div>
+        </section>
+
+        <section class="section" id="profile">
+          <div class="section-head"><div><span class="eyebrow">On this device only</span><h2>Your app<br>profile.</h2></div><p>Choose a display name and course so the home screen feels personal. These details are stored in this browser only.</p></div>
+          <div class="tool-card"><form class="tool-form" id="profileForm"><div class="form-row"><label>Display name<input id="profileName" maxlength="32" placeholder="Your name"></label><label>Course / year<input id="profileCourse" maxlength="60" placeholder="e.g. B.Tech CSE · 2nd year"></label></div><button class="button" type="submit">Save on this phone</button></form></div>
+          <div class="official-portal-panel"><h3>Attendance, marks, fees and personal notices</h3><p>Sign in only on LPU's official portal. Campus Hub never asks for your UMS password or stores private academic data.</p><a class="button" href="https://ums.lpu.in/lpuums/" target="_blank" rel="noopener noreferrer">Open official UMS ↗</a></div>
+        </section>
+
         <section class="section" id="more">
           <div class="section-head"><div><span class="eyebrow">Everything in one place</span><h2>More campus<br>services.</h2></div><p>Open each area in its own screen. For personal student records and account details, continue to the official LPU sign-in.</p></div>
           <div class="official-portal-panel"><h3>Official LPU UMS sign-in</h3><p>Use LPU’s own secure portal for account-specific information. This guide never asks for or stores your password.</p><a class="button" href="https://ums.lpu.in/lpuums/" target="_blank" rel="noopener noreferrer">Open official UMS ↗</a></div>
@@ -590,10 +661,10 @@
 
   <nav class="mobile-nav" id="appTabBar" aria-label="Main navigation">
     <a class="active" href="#home" aria-label="Home"><span class="tab-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-7h-6v7H4a1 1 0 0 1-1-1z"/></svg></span><small>Home</small></a>
-    <a href="#academics" aria-label="Academics"><span class="tab-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v16H6.5A2.5 2.5 0 0 0 4 21z"/><path d="M4 5.5v13A2.5 2.5 0 0 1 6.5 16H20M8 7h8M8 10h6"/></svg></span><small>Study</small></a>
-    <a href="#life" aria-label="Events"><span class="tab-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5" width="17" height="16" rx="3"/><path d="M7.5 3v4M16.5 3v4M3.5 10h17M8 14h3M8 17h6"/></svg></span><small>Events</small></a>
-    <a href="#residence" aria-label="Hostel"><span class="tab-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 20V7l9-4 9 4v13M3 10h18M7 20v-5h4v5M15 11h2M7 8h2M15 8h2"/></svg></span><small>Hostel</small></a>
-    <a href="#more" aria-label="More"><span class="tab-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.4"/><circle cx="12" cy="12" r="1.4"/><circle cx="19" cy="12" r="1.4"/></svg></span><small>More</small></a>
+    <a href="#classes" aria-label="Classes"><span class="tab-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v16H6.5A2.5 2.5 0 0 0 4 21z"/><path d="M4 5.5v13A2.5 2.5 0 0 1 6.5 16H20M8 7h8M8 10h6"/></svg></span><small>Classes</small></a>
+    <a href="#residence" aria-label="Mess"><span class="tab-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 20V7l9-4 9 4v13M3 10h18M7 20v-5h4v5M15 11h2M7 8h2M15 8h2"/></svg></span><small>Mess</small></a>
+    <a href="#campus" aria-label="Campus"><span class="tab-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3 6 6-3 6 3 6-3v15l-6 3-6-3-6 3zM9 3v15M15 6v15"/></svg></span><small>Campus</small></a>
+    <a href="#profile" aria-label="Profile"><span class="tab-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg></span><small>Profile</small></a>
   </nav>
 
   <footer><div class="wrap footer-inner"><span><span class="footer-brand">LPU Campus Hub</span> · Independent student guide · Information checked 2 Nov 2026</span><a class="to-top" href="#home">Back to top ↑</a></div></footer>
@@ -621,10 +692,10 @@
       document.getElementById('homeNoResults').style.display=query&&!homeCards.some(card=>!card.hidden)?'block':'none';
     }
     searchInput.addEventListener('input',filterGuide);
-    const screenNames={home:'Home',academics:'Academics',life:'Events & campus life',sports:'Sports & fitness',residence:'Hostel & food',services:'Student services',map:'Campus map',more:'More',sources:'Official links'};
+    const screenNames={home:'Home',classes:'Classes & timetable',tasks:'CA & task planner',sgpa:'SGPA calculator',bills:'Bill split',laundry:'Laundry',holidays:'Calendar & holidays',campus:'Campus directory',profile:'Profile',academics:'Academics',life:'Events & campus life',sports:'Sports & fitness',residence:'Hostel & food',services:'Student services',map:'Campus map',more:'More',sources:'Official links'};
     const appTabs=[...document.querySelectorAll('#appTabBar a')];
     const sections=[...document.querySelectorAll('#contentArea > .section')];
-    const tabForScreen={home:'#home',academics:'#academics',life:'#life',sports:'#more',residence:'#residence',services:'#more',map:'#more',more:'#more',sources:'#more'};
+    const tabForScreen={home:'#home',classes:'#classes',academics:'#classes',tasks:'#classes',sgpa:'#classes',bills:'#campus',laundry:'#campus',holidays:'#campus',campus:'#campus',profile:'#profile',life:'#campus',sports:'#campus',residence:'#residence',services:'#campus',map:'#campus',more:'#campus',sources:'#campus'};
     function currentScreen(){const id=location.hash.replace(/^#/,'');return screenNames[id]?id:'home'}
     function renderScreen(screen){
       const active=screenNames[screen]?screen:'home';
@@ -656,6 +727,23 @@
     window.addEventListener('popstate',()=>renderScreen(currentScreen()));
     window.addEventListener('hashchange',()=>renderScreen(currentScreen()));
     renderScreen(currentScreen());
+    const profileStoreKey='lpuHubProfileV1';
+    const taskStoreKey='lpuHubTasksV1';
+    const safeRead=(key,fallback)=>{try{return JSON.parse(localStorage.getItem(key))??fallback}catch{return fallback}};
+    const profile=safeRead(profileStoreKey,{});
+    const profileName=document.getElementById('profileName');
+    const profileCourse=document.getElementById('profileCourse');
+    function renderProfile(){const name=profile.name||'Student';const course=profile.course||'Your campus dashboard';document.getElementById('dashboardName').textContent=name;document.getElementById('summaryName').textContent=profile.name||'LPU student';document.getElementById('dashboardCourse').textContent=course;document.getElementById('summaryCourse').textContent=profile.course||'Independent campus guide';document.getElementById('studentInitials').textContent=(name.trim()[0]||'L').toUpperCase();document.querySelector('.dashboard-avatar').textContent=(name.trim().slice(0,2)||'LPU').toUpperCase();profileName.value=profile.name||'';profileCourse.value=profile.course||''}
+    renderProfile();
+    document.getElementById('profileForm').addEventListener('submit',event=>{event.preventDefault();profile.name=profileName.value.trim();profile.course=profileCourse.value.trim();try{localStorage.setItem(profileStoreKey,JSON.stringify(profile))}catch{}renderProfile();openScreen('profile');});
+    let tasks=safeRead(taskStoreKey,[]);if(!Array.isArray(tasks))tasks=[];
+    const taskList=document.getElementById('taskList');
+    function renderTasks(){taskList.replaceChildren();const open=tasks.filter(task=>!task.done).length;document.getElementById('taskCount').textContent=String(open);const next=tasks.find(task=>!task.done);document.getElementById('taskPreview').textContent=next?`${next.title}${next.due?' · '+next.due:''}`:'Add your first CA or deadline';if(!tasks.length){const empty=document.createElement('p');empty.className='tool-card';empty.textContent='No tasks yet. Add an assignment or reminder above.';taskList.append(empty);return}for(const task of tasks){const row=document.createElement('div');row.className='task-item'+(task.done?' is-done':'');const check=document.createElement('input');check.type='checkbox';check.checked=!!task.done;check.setAttribute('aria-label','Mark '+task.title+' complete');check.addEventListener('change',()=>{task.done=check.checked;saveTasks()});const text=document.createElement('span');text.textContent=task.title;const meta=document.createElement('small');meta.textContent=[task.course,task.due].filter(Boolean).join(' · ')||'Personal reminder';text.append(meta);const del=document.createElement('button');del.type='button';del.className='task-delete';del.textContent='×';del.setAttribute('aria-label','Delete '+task.title);del.addEventListener('click',()=>{tasks=tasks.filter(item=>item.id!==task.id);saveTasks()});row.append(check,text,del);taskList.append(row)}}
+    function saveTasks(){try{localStorage.setItem(taskStoreKey,JSON.stringify(tasks))}catch{}renderTasks()}
+    renderTasks();
+    document.getElementById('taskForm').addEventListener('submit',event=>{event.preventDefault();const title=document.getElementById('taskTitle');tasks.unshift({id:Date.now(),title:title.value.trim(),course:document.getElementById('taskCourse').value.trim(),due:document.getElementById('taskDue').value,done:false});saveTasks();event.target.reset();title.focus()});
+    document.getElementById('sgpaForm').addEventListener('submit',event=>{event.preventDefault();const rows=[...event.target.querySelectorAll('[data-credit]')].map((credit,i)=>({credit:Number(credit.value)||0,grade:Number(event.target.querySelectorAll('[data-grade]')[i].value)}));const credits=rows.reduce((sum,row)=>sum+row.credit,0);const points=rows.reduce((sum,row)=>sum+row.credit*row.grade,0);document.getElementById('sgpaResult').textContent=credits?`Estimated SGPA: ${(points/credits).toFixed(2)} / 10`:'Enter course credits to calculate.'});
+    document.getElementById('billForm').addEventListener('submit',event=>{event.preventDefault();const amount=Number(document.getElementById('billAmount').value),people=Number(document.getElementById('billPeople').value);document.getElementById('billResult').textContent=people>0?`Each person pays ₹${(amount/people).toFixed(2)}`:'Enter at least one person.'});
     const menuToggle=document.getElementById('menuToggle');
     const topNav=document.getElementById('topNav');
     menuToggle.addEventListener('click',()=>{const open=topNav.classList.toggle('open');menuToggle.setAttribute('aria-expanded',String(open));menuToggle.setAttribute('aria-label',open?'Close menu':'Open menu')});

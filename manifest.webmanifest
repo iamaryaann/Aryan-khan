@@ -5,12 +5,12 @@
   "description": "A student guide to Lovely Professional University academics, campus life, hostels, mess, services and directions.",
   "lang": "en",
   "dir": "ltr",
-  "start_url": "/",
+  "start_url": "/?appVersion=campusgrid-v2",
   "scope": "/",
   "display": "standalone",
   "orientation": "portrait-primary",
-  "background_color": "#f4f5fa",
-  "theme_color": "#29346d",
+  "background_color": "#f4f6f9",
+  "theme_color": "#1b2a40",
   "categories": [
     "education",
     "lifestyle",
@@ -45,10 +45,10 @@
   "screenshots": [
     {
       "src": "/preview.png",
-      "sizes": "1280x720",
+      "sizes": "375x812",
       "type": "image/png",
-      "form_factor": "wide",
-      "label": "LPU Campus Hub home page"
+      "form_factor": "narrow",
+      "label": "LPU Campus Hub mobile dashboard"
     }
   ]
 }

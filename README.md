@@ -6,20 +6,22 @@ An independent student guide for Lovely Professional University. It presents cam
 
 ## App screens
 
-- Home dashboard with quick access and campus search
+- Home dashboard with quick actions, profile summary and campus search
+- Classes, timetable shortcut, personal CA planner and SGPA estimate calculator
+- Bill split, laundry information, academic calendar and profile screens
 - Academics, programmes, schools and student resources
 - Events and campus life
 - Hostel, residence and mess information
 - Sports and fitness
 - Health, transport and student services
 - Campus map, directions and official university links
-- Fixed bottom navigation and browser Back support
+- Bottom navigation with separate screens and browser Back support
 
-The UMS button opens LPU's official sign-in page. Campus Hub does not collect or store login credentials.
+The UMS button opens LPU's official sign-in page. Campus Hub does not collect or store login credentials. Profile details and planner items stay in local browser storage on the device.
 
 ## Run or publish
 
-This is a static Progressive Web App. It has no build step; open `index.html` or upload the folder to a static host. HTTPS is required for service-worker caching and home-screen installation.
+This is a static Progressive Web App. It has no build step; open `index.html` or upload the folder to a static host. On Android, open the HTTPS link in Chrome, then choose **Install app** or **Add to Home screen** from the browser menu.
 
 ## Project status
 
